@@ -1,0 +1,88 @@
+header h1 span {
+    font-weight: bold;
+}
+
+#header {
+    transition: all 3s ease; 
+}
+
+header .container {
+    padding-top: 20px;
+    transition: background-color 0.5s ease, padding 0.5s ease, box-shadow 0.5s ease;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 5s ease-in-out;
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0d462c;
+    z-index: 1000; /* Ensure it's above other content */
+    left: 100px;
+    transition: all 0.5s ease-in-out; 
+}
+
+.sticky-header .nav {
+    margin-top: 0;
+    padding-left: 0;
+    transition: all 0.5s ease-in-out; 
+}
+
+/* Prevent text from shifting */
+.sticky-header .container {
+    width: 100%;
+    padding-left: 0; /* Remove any left padding */
+    padding-right: 0; /* Remove any right padding */
+    transition: all 0.5s ease-in; /* Smooth transition */
+}
+
+@font-face {
+    font-family: 'Nognathy Serif';
+    src: url('./fonts/Pendowo-BF647f2c482ba20.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons on the left */
+}
+
+.nav-buttons .btn {
+    margin-left: 10px;
+    margin-right: 10px; /* Add some space between the buttons */
+}
+
+.nav-buttons .btn:last-child {
+    margin-left: auto; /* Push the "Логин" button to the right */
+}
+
+body{
+    background-color: #FFFFFF;
+    font-family: 'Merriweather', serif;
+}
+h1 {
+    font-family: 'Nognathy Serif', serif;
+}
+
+.main-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.bg-custom {
+    background-color: #0d462c;
+}
+

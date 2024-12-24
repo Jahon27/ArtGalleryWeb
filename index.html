@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арт-галерея "Сомонён"</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="bg-custom text-white py-3">
+        <!-- <br>
+        <br> -->
+        <!-- <div class="container text-center">
+            <h1>GAFUR JURAEV's</h1>
+            <h1>ART GALLERY</h1>
+        </div> -->
+        <div class="nav-buttons d-flex align-items-center">
+            <!-- Кнопка корзины -->
+            <button class="btn btn-light me-2">
+                <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+            </button>
+
+            <!-- Логин button with icon -->
+            <button class="btn btn-light">
+                <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+            </button>
+        </div>
+        <div id="header" class="container text-center">
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Картины</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Авторы</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Статьи</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-content py-5">
+        <div class="container text-center">
+            <h2 class="display-4">Откройте мир искусства вместе с нами!</h2>
+            <p class="lead">Каждая работа — это история, вдохновение и красота, воплощённые на холсте.</p>
+            <button class="btn btn-success btn-lg">В наличии</button>
+        </div>
+    </section>
+
+    <!-- Pictures -->
+    <section class="new-arrivals py-5">
+        <div class="container text-center">
+            <h2>НОВИНКИ</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./images/parvina.jpg" class="img-fluid" alt="Lillian Morgan">
+                    <h4>Lillian Morgan</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/naturmort.JPG" class="img-fluid" alt="Cynthia Lawson">
+                    <h4>Cynthia Lawson</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/im.jpg" class="img-fluid" alt="Elaine Isaac">
+                    <h4>Elaine Isaac</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us py-5 bg-light">
+        <div class="container text-center">
+            <h2>О НАС</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/main.jpg" class="img-fluid" alt="Mission Image">
+                </div>
+                <div class="col-md-6">
+                    <h4>Наша миссия</h4>
+                    <p>Deviant Art портфолио представляет собой современную и элегантную онлайн-галерею, специализирующуюся на продаже картин. Наша галерея предлагает широкий ассортимент произведений различных художников, отражающих разнообразие стилей и тематики. Мы стремимся создать дружелюбный и удобный для пользователей дизайн, который приветствует посетителей и обеспечивает легкую навигацию.</p>
+                    <button class="btn btn-success">Узнать больше</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2>DEVIANT ART</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>+7 123 456 78 90</p>
+                    <p>info@mystudio.ru</p>
+                </div>
+                <div class="col-md-4">
+                    <p>ул. Арбат, 1а, 119019, Москва</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.instagram.com" target="_blank" class="text-white">
+                        <img src="path_to_instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white">
+                        <img src="path_to_facebook_icon.png" alt="Facebook" style="width: 40px; height: 40px;">
+                    </a>
+                </div>
+            </div>
+            <div>
+                Powered by <br> Jahonoro Tojieva & Aziz Zamonov
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script>
+        // JavaScript to handle the scroll event and add sticky class
+        window.onscroll = function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 200) { // Adjust this value to when you want it to trigger
+                header.classList.add('sticky-header');
+            } else {
+                header.classList.remove('sticky-header');
+            }
+        };
+    </script>
+</body>
+</html>
