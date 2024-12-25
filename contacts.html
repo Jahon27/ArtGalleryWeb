@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арт-галерея "Сомонён"</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="bg-custom text-white py-3">
+        <!-- <br>
+        <br> -->
+        <!-- <div class="container text-center">
+            <h1>GAFUR JURAEV's</h1>
+            <h1>ART GALLERY</h1>
+        </div> -->
+        <div class="nav-buttons d-flex align-items-center">
+            <!-- Кнопка корзины -->
+            <button class="btn btn-light me-2">
+                <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+            </button>
+
+            <!-- Логин button with icon -->
+            <button class="btn btn-light">
+                <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+            </button>
+        </div>
+        <div id="header" class="container text-center">
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pictures.html">Картины</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autors.html">Авторы</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="articles.html">Статьи</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script>
+        // JavaScript to handle the scroll event and add sticky class
+        window.onscroll = function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 200) { // Adjust this value to when you want it to trigger
+                header.classList.add('sticky-header');
+            } else {
+                header.classList.remove('sticky-header');
+            }
+        };
+    </script>
+</body>
+</html>

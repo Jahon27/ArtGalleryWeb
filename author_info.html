@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о авторе</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="bg-custom text-white py-3">
+        <div id="header" class="container text-center">
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pictures.html">Картины</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autors.html">Авторы</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="articles.html">Статьи</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Author Information Section -->
+    <section class="author-info py-5">
+        <div class="container text-center">
+            <h2 id="authorName">Гафур Джураев</h2>
+            <div id="authorImage">
+                <img src="./images/jg.JPG" class="img-fluid" alt="Гафур Джураев">
+            </div>
+            <div id="authorDescription" class="mt-3">
+                <h4>Об авторе</h4>
+                <p>Здесь будет информация о Гафуре Джураеве...</p>
+            </div>
+            <div id="authorAchievements" class="mt-3">
+                <h4>Достижения</h4>
+                <p>Здесь будут достижения Гафура Джураева...</p>
+            </div>
+            <div id="authorPaintings" class="mt-3">
+                <h4>Картины</h4>
+                <p>Здесь будут картины Гафура Джураева...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Получаем параметр из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const author = urlParams.get('author');
+
+        // В зависимости от выбранного автора, подгружаем его данные
+        if (author === 'juraev') {
+            document.getElementById('authorName').innerText = 'Гафур Джураев';
+            document.getElementById('authorDescription').innerHTML = '<h4>Об авторе</h4><p>Здесь будет информация о Гафуре Джураеве...</p>';
+            document.getElementById('authorAchievements').innerHTML = '<h4>Достижения</h4><p>Здесь будут достижения Гафура Джураева...</p>';
+            document.getElementById('authorPaintings').innerHTML = '<h4>Картины</h4><p>Здесь будут картины Гафура Джураева...</p>';
+        }
+        // Можете добавить другие авторов с помощью похожей логики
+    </script>
+</body>
+</html>

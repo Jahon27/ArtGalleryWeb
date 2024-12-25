@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арт-галерея "Сомонён"</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="bg-custom text-white py-3">
+        <!-- <br>
+        <br> -->
+        <!-- <div class="container text-center">
+            <h1>GAFUR JURAEV's</h1>
+            <h1>ART GALLERY</h1>
+        </div> -->
+        <div class="nav-buttons d-flex align-items-center">
+            <!-- Кнопка корзины -->
+            <button class="btn btn-light me-2">
+                <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+            </button>
+
+            <!-- Логин button with icon -->
+            <button class="btn btn-light">
+                <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+            </button>
+        </div>
+        <div id="header" class="container text-center">
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pictures.html">Картины</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autors.html">Авторы</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="articles.html">Статьи</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Pictures -->
+    <section class="new-arrivals py-5">
+        <div class="container text-center">
+            <h2>Картины</h2>
+            <div class="sorting-buttons text-center mb-4">
+                <button class="btn btn-success" onclick="sortBy('name')">По названию</button>
+                <button class="btn btn-success" onclick="sortBy('price')">По цене</button>
+                <div class="dropdown d-inline-block">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        По типу
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#" onclick="filterByType('landscape')">Пейзаж</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterByType('portrait')">Портрет</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterByType('still_life')">Натюрморт</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterByType('all')">Все картины</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Выпадающее меню для сортировки по авторам -->
+                <div class="dropdown d-inline-block">
+                    <button class="btn btn-success dropdown-toggle" id="dropdownMenuAuthor" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        По авторам
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuAuthor">
+                        <li><a class="dropdown-item" href="#" onclick="sortByAuthor('juraev')">Гафур Джураев</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="sortByAuthor('negmatov')">Курбонали Негматов</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="sortByAuthor('all')">Все картины</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3" data-type="portrait" data-price="300" data-author="juraev">
+                    <img src="./images/parvina.jpg" class="img-fluid" alt="Lillian Morgan" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Lillian Morgan</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3" data-type="landscape" data-price="200" data-author="juraev">
+                    <img src="./images/naturmort.JPG" class="img-fluid" alt="Cynthia Lawson" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Cynthia Lawson</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3" data-type="portrait" data-price="100" data-author="juraev">
+                    <img src="./images/im.jpg" class="img-fluid" alt="Elaine Isaac" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Elaine Isaac</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="./images/5.jpg" class="img-fluid" alt="Elaine Isaac" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Elaine Isaac</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="./images/1.JPG" class="img-fluid" alt="Lillian Morgan" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Lillian Morgan</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="./images/2.JPG" class="img-fluid" alt="Cynthia Lawson" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Cynthia Lawson</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="./images/3.jpg" class="img-fluid" alt="Elaine Isaac" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Elaine Isaac</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="./images/4.jpg" class="img-fluid" alt="Elaine Isaac" data-bs-toggle="modal" onclick="openModal(this, 'Lillian Morgan', 'Use a text section to describe your values, show more info, etc.')">
+                    <h4>Elaine Isaac</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                    <p>300 сомони</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Описание картины</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="Полное изображение">
+                    <p id="modalDescription" class="mt-3">Описание картины будет здесь.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts -->
+    <section class="contacts py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2>DEVIANT ART</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>+7 123 456 78 90</p>
+                    <p>info@mystudio.ru</p>
+                </div>
+                <div class="col-md-4">
+                    <p>ул. Арбат, 1а, 119019, Москва</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://www.instagram.com" target="_blank" class="text-white">
+                        <img src="path_to_instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white">
+                        <img src="path_to_facebook_icon.png" alt="Facebook" style="width: 40px; height: 40px;">
+                    </a>
+                </div>
+            </div>
+            <div>
+                Powered by <br> Jahonoro Tojieva & Aziz Zamonov
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script>
+        // JavaScript to handle the scroll event and add sticky class
+        window.onscroll = function() {
+            var header = document.getElementById('header');
+            if (window.scrollY > 200) { // Adjust this value to when you want it to trigger
+                header.classList.add('sticky-header');
+            } else {
+                header.classList.remove('sticky-header');
+            }
+        };
+
+        // Открытие модального окна с изображением и описанием
+        function openModal(imgElement, title, description) {
+            var modalImage = document.getElementById('modalImage');
+            var modalDescription = document.getElementById('modalDescription');
+            
+            // Устанавливаем src изображения и описание
+            modalImage.src = imgElement.src;
+            modalDescription.innerText = description;
+
+            // Устанавливаем заголовок модального окна
+            document.getElementById('imageModalLabel').innerText = title;
+            
+            // Используем Bootstrap для открытия модального окна
+            var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            myModal.show();
+        }
+
+        // Функция сортировки
+        function sortBy(criteria) {
+            var paintings = document.querySelectorAll('.new-arrivals .col-md-3');  // Все картины
+            var paintingsArray = Array.from(paintings);  // Преобразуем в массив для сортировки
+
+            if (criteria === 'name') {
+                paintingsArray.sort(function(a, b) {
+                    var nameA = a.querySelector('h4').innerText.toLowerCase();
+                    var nameB = b.querySelector('h4').innerText.toLowerCase();
+                    return nameA.localeCompare(nameB);  // Сортировка по алфавиту
+                });
+            } else if (criteria === 'price') {
+                paintingsArray.sort(function(a, b) {
+                    var priceA = parseFloat(a.getAttribute('data-price'));
+                    var priceB = parseFloat(b.getAttribute('data-price'));
+                    return priceA - priceB;  // Сортировка по цене (по возрастанию)
+                });
+            } else if (criteria === 'type') {
+                paintingsArray.sort(function(a, b) {
+                    var typeA = a.getAttribute('data-type');
+                    var typeB = b.getAttribute('data-type');
+                    return typeA.localeCompare(typeB);  // Сортировка по типу
+                });
+            }
+
+            // Перемещаем отсортированные элементы в DOM
+            var container = document.querySelector('.new-arrivals .row');
+            paintingsArray.forEach(function(painting) {
+                container.appendChild(painting);
+            });
+        }
+
+        // Фильтрация картин по типу
+        function filterByType(type) {
+            var paintings = document.querySelectorAll('.new-arrivals .col-md-3');
+            paintings.forEach(function(painting) {
+                if (type === 'all' || painting.getAttribute('data-type') === type) {
+                    painting.style.display = 'block';  // Показываем картину
+                } else {
+                    painting.style.display = 'none';  // Прячем картину
+                }
+            });
+        }
+
+        // Функция сортировки по авторам
+        function sortByAuthor(author) {
+            var paintings = document.querySelectorAll('.new-arrivals .col-md-3');
+            paintings.forEach(function(painting) {
+                if (author === 'all' || painting.getAttribute('data-author') === author) {
+                    painting.style.display = 'block';  // Показываем картину
+                } else {
+                    painting.style.display = 'none';  // Прячем картину
+                }
+            });
+        }
+
+
+
+    </script>
+</body>
+</html>

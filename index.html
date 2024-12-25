@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login_window/modal.css">
+
 </head>
 <body>
 
@@ -29,18 +31,19 @@
             </button>
 
             <!-- Логин button with icon -->
-            <button class="btn btn-light">
-                <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+            <button id="loginButton" class="btn btn-light">
+                <i class="fas fa-user"></i>
             </button>
+            
         </div>
         <div id="header" class="container text-center">
             <nav>
                 <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Картины</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Авторы</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Статьи</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pictures.html">Картины</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="autors.html">Авторы</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="articles.html">Статьи</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,18 +61,24 @@
     <section class="new-arrivals py-5">
         <div class="container text-center">
             <h2>НОВИНКИ</h2>
+            <br>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="./images/parvina.jpg" class="img-fluid" alt="Lillian Morgan">
                     <h4>Lillian Morgan</h4>
                     <p>Use a text section to describe your values, show more info, etc.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="./images/naturmort.JPG" class="img-fluid" alt="Cynthia Lawson">
                     <h4>Cynthia Lawson</h4>
                     <p>Use a text section to describe your values, show more info, etc.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <img src="./images/im.jpg" class="img-fluid" alt="Elaine Isaac">
+                    <h4>Elaine Isaac</h4>
+                    <p>Use a text section to describe your values, show more info, etc.</p>
+                </div>
+                <div class="col-md-3">
                     <img src="./images/im.jpg" class="img-fluid" alt="Elaine Isaac">
                     <h4>Elaine Isaac</h4>
                     <p>Use a text section to describe your values, show more info, etc.</p>
@@ -122,8 +131,31 @@
         </div>
     </section>
 
+    <!-- Login Window -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Логин</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Имя пользователя</label>
+                    <input type="text" id="username" class="form-control" placeholder="Введите имя пользователя">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Пароль</label>
+                    <input type="password" id="password" class="form-control" placeholder="Введите пароль">
+                </div>
+                <button type="button" class="btn btn-primary">Войти</button>
+                <button type="button" class="btn btn-link">Регистрация</button>
+            </form>
+        </div>
+    </div>
+    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./login_window/modal.js"></script>
+
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
     <script>
